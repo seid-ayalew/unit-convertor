@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Unit Converter</h1>
+        </header>
+
+        <main>
+            <section class="unit-category">
+                <select id="categorySelect" aria-label="Select unit category" onchange="updateUnits()">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                    <option value="volume">Volume</option>
+                </select>
+            </section>
+
+            <section class="conversion-section">
+                <div class="converter-wrapper">
+                    <div class="input-group">
+                        <label for="fromUnit">From</label>
+                        <select id="fromUnit" aria-label="Select source unit"></select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="toUnit">To</label>
+                        <select id="toUnit" aria-label="Select target unit"></select>
+                    </div>
+                </div>
+
+                <div class="converter-wrapper">
+                    <div class="input-group">
+                        <input type="number" id="inputValue" 
+                               placeholder="Enter value..." 
+                               aria-label="Enter value to convert">
+                    </div>
+                    <button onclick="convert()" aria-label="Convert units">Convert</button>
+                </div>
+
+                <output class="result" id="result" role="status"></output>
+            </section>
+
+            <section class="feature-box" aria-labelledby="features-heading">
+                <h3 id="features-heading">Features</h3>
+                <ul>
+                    <li>Real-time conversion</li>
+                    <li>Multiple categories</li>
+                    <li>Accurate calculations</li>
+                    <li>Responsive design</li>
+                    <li>Professional UI</li>
+                    <li>Instant results</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
